@@ -170,3 +170,39 @@ h1, h2, h3 {
 	margin: 0 10px;
 	color: #000;
 }
+
+
+p img{
+	width: 100%;
+}
+
+.navbar{
+	padding: 0;
+}
+
+.navbar-toggleable-sm .navbar-nav .nav-link{
+	padding-left: 1em;
+	padding-right: 0;
+}
+
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.intro{
+	padding:160px 120px;
+	padding-bottom: 240px;
+	text-align: center;
+}
+
+.intro h1{
+	font-weight: 800;
+}
+
+.intro h1 span{
+	color: #1445ff;
+	font-size: 40px;
+	font-weight: 800;
+	font-family: pingfang
+}
