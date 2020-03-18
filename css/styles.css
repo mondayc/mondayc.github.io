@@ -1,5 +1,5 @@
 body {
-	font-family: 'Pingfang','Open Sans',;
+	font-family: 'Open Sans', sans-serif;
 }
 
 form {
@@ -55,33 +55,11 @@ input:focus, textarea:focus {
 	border-bottom: 1px solid #555;
 }
 
-h1, h2, h3,p {
-	font-family: 'Roboto Mono''Open Sans';
-	letter-spacing: .6px;
-	font-weight: 300;
-	margin-bottom: 8px;
-}
-
-h1{
-	font-weight: 600;
-	color: rgba(0,0,0,.86);
-}
-
-h2{
-	font-weight: 500;
-	font-size: 24px;
-	color: rgba(0,0,0,.86);
-}
-
-h3{
-	font-weight: 300;
-	color: rgba(0,0,0,.45);
-	margin-bottom: 24px;
-}
-
-p{
-	color: rgba(0,0,0,.65);
-	margin-bottom: 8px;
+h1, h2, h3 {
+	font-family: 'Pingfang', sans-serif;
+	letter-spacing: 1px;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 .navbar-brand {
@@ -157,7 +135,6 @@ p{
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  margin: 0;
 }
 
 .hovereffect:hover .overlay-text {
@@ -178,7 +155,7 @@ p{
 }
 
 .hovereffect:hover img {
-  opacity: .1;
+  opacity: 0;
   filter: alpha(opacity=0);
 }
 .page-nav {
@@ -192,28 +169,4 @@ p{
 	font-weight: 300;
 	margin: 0 10px;
 	color: #000;
-}
-p img{
-	width: 100%;
-}
-
-.duan{
-	font-weight: 600;
-	color: rgba(0,0,0,.65);
-}
-
-.portfolio-content{
-	padding: 0 24px !important;
-}
-
-/*-----footer-----*/
-
-.footer{
-	text-align: center;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    min-height: 50px;
-    color: rgba(0,0,0,.25);
-    font-size: 12px;
 }
