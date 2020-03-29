@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Web 导航栏--长Tab 响应式设计">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>Web 导航栏--长Tab 响应式设计 - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>Web 导航栏--长Tab 响应式设计</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>最近在思考有关Tab「极端」情况的设计。</p>
+<p>先从Bootstrap 框架说起。Bootstrap 页面框架中的汉堡包导航方式无处不在，先看两个典型的例子–&gt;&gt;<br><img src="/img/in-post/2016-08-17/01.gif" alt="hamburger-1"></p>
+<p><img src="/img/in-post/2016-08-17/02.gif" alt="hamburger-2"></p>
+<p>以上导航的方式，一种是刚开始就以汉堡包折叠了起来，另一种则是当页面窄到某一数值，就将菜单折叠起来变成汉堡包。讲真，总有一种强行加特技的赶脚。好端端的导航，却要隐藏起来，徒增切换成本。隐藏起来页面的确会显得更简洁，但在切换时多了一步操作，用户更容易分心。</p>
+<p>再放一个在小屏幕上展开的图：</p>
+<p><img src="/img/in-post/2016-08-17/03.gif" alt="hamburger-滚动"><br>一展开，全屏幕都是导航Tab，每个Tab 独占一行，大概是想要上天？</p>
+<p>是病得治，Material Design 设计规范如是说–&gt;&gt;<a href="https://material.google.com/components/tabs.html#tabs-usage" target="_blank" rel="noopener">Tabs - Components - Google design guidelines</a>. 现在越来越多的移动应用抛弃了汉堡包，取而代之的是垂直两端的Tab 导航栏。</p>
+<p><img src="/img/in-post/2016-08-17/01.png" alt></p>
+<p>正如上图所示，没有那么宽，还要霸占一行的位置→_→，顺便把内容都挤下去了。于是我在思考，如果有较多的Tab，优先考虑横向排列，至于小屏溢出部分则可以左右切换。</p>
+<p>用户往往更青睐于滑动、滚动的操作，而讨厌反复点击。幸运的是，<a href="https://material.angularjs.org/" target="_blank" rel="noopener">Angular Material</a> 就是这么做的！当标签位置超出窗口尺寸，便可以横向滑动进行切换。<br><img src="/img/in-post/2016-08-17/04.gif" alt="Angular Tabs demo"></p>
+<hr>
+<p>顺着这个思路，我做了个对应的二级Tab 导航demo：</p>
+<p><img src="/img/in-post/2016-08-17/05.gif" alt></p>
+<p>为了节省屏幕空间，也可以省略两端的方向图标。codepen 链接<a href="http://codepen.io/fishfish/pen/vKbzAw" target="_blank" rel="noopener">戳这里</a>.</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/交互/" class="button small">交互</a> <a href="/tags/Web/" class="button small">Web</a> <a href="/tags/Responsive-响应式/" class="button small">Responsive/响应式</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

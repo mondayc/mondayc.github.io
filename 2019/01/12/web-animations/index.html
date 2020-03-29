@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="3个要素，重新认识Web中后台动效">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>3个要素，重新认识Web中后台动效 - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>3个要素，重新认识Web中后台动效</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>「我设计了一个切换动效，先这样，然后这样，最后这样…效果视频在这里！」<br>…<br>前端甲：「不加动效又不是不能用」<br>前端乙：「告诉我用的什么缓动、延时间隔、每个元素过渡时间多久」<br>前端丙：「你的设计不符合框架，是没办法实现的」<br>…</p>
+<p>不难看出，前端工程师根据以往工作经验，容易形成 <strong>设计师不懂实现原理</strong> 的刻板印象认知偏见，对动效实现尤其如此。</p>
+<p>为了从根源上解决这个问题，我们从基本原理和前端实现，来硬核拆解一下动效。</p>
+<hr>
+<h3 id="动效拆解"><a href="#动效拆解" class="headerlink" title="动效拆解"></a>动效拆解</h3><p>Web端可交互元素产生的动画，通常由一些条件(hover/ click/ double-click/ drag) 触发，使元素从一个状态变为另一个状态。对于成组元素更复杂点的动画，则需要通过keyframes定义中间态的关键帧。</p>
+<p>关键帧用来定义元素模块的样式、形状大小和位置等；动效始末时间差构成持续时长；缓动曲线形成节奏，以实现自然过渡效果。</p>
+<p>一个组件模块在动效展示中，元素变化可拆解为以下四类：</p>
+<ol>
+<li>连续变化元素</li>
+<li>移出元素</li>
+<li>移入元素</li>
+<li>共享元素</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/674139-7cc1b30d68a3f306.gif" alt="MD-动效分解.gif"></p>
+<p>相较于C端产品的情感化设计，在中后台设计中，动效主要作用可概括为信息承载、突出重点、强化品牌。</p>
+<h3 id="时长"><a href="#时长" class="headerlink" title="时长"></a>时长</h3><p>动效时长与动效复杂程度、类型、面积大小相关。</p>
+<ol>
+<li>简单控件通常持续时间更短，组合控件和复杂动效持续时间更长。</li>
+<li>由于无需吸引太多用户注意力，元素的关闭、离开、折叠等相较出现持续时间更短。</li>
+<li>动效面积越大，持续时间需适当延长。</li>
+</ol>
+<blockquote>
+<p>参照Material Design：</p>
+<ul>
+<li>Radio/Switch 100ms</li>
+<li>Dialog 显示/消失 150ms/75ms</li>
+<li>形状转变 200ms</li>
+<li>微动效 500ms</li>
+</ul>
+</blockquote>
+<h3 id="节奏"><a href="#节奏" class="headerlink" title="节奏"></a>节奏</h3><p>自然物体位置变化遵循牛顿运动定律。就像自然世界中很少有匀速直线运动，在界面设计中也尽量避免匀速运动，我们用缓动曲线来调整动效节奏，使之更接近自然。</p>
+<h4 id="缓动曲线"><a href="#缓动曲线" class="headerlink" title="缓动曲线"></a>缓动曲线</h4><p>缓动曲线用来控制动画的运动速率，使其按照我们的意愿模拟真实物体的运动规律。想象一下钟摆实验。</p>
+<p>缓动的实现，离不开贝塞尔曲线。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/674139-d347fc6e71bb4c30.png" alt="image.png"></p>
+<p>在CSS中，我们常用的缓动<code>cubic-bezier</code>，即标准三次方贝塞尔曲线。以渐入渐出曲线为例，曲线中有两个固定锚点(0,0)和(1,1)，还有两个可拖动的中间点(0.6,0.2)和(0.4,0.8)。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/674139-eb7697c486afcf94.png" alt="image.png"></p>
+<p>对应的CSS：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: cubic-bezier(0.6, 0.2, 0.4, 0.8);</span><br></pre></td></tr></table></figure>
+
+<p>你也可以按需求调整参数：<a href="https://cubic-bezier.com/" target="_blank" rel="noopener">https://cubic-bezier.com/</a></p>
+<p>加上持续时间 100ms：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 100ms cubic-bezier(0.6, 0.2, 0.4, 0.8);</span><br></pre></td></tr></table></figure>
+
+<p>如果给动效触发再加上50ms延时，就会是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 100ms cubic-bezier(0.6, 0.2, 0.4, 0.8) 50ms;</span><br></pre></td></tr></table></figure>
+
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p>自定义参数值的贝塞尔曲线固然好，调整起来还是比较麻烦。通常直接使用缓动曲线，如：<code>ease-in</code>、<code>ease-out</code>、<code>ease-in-out</code></p>
+<p>默认曲线可参考 <a href="https://easings.net/" target="_blank" rel="noopener">https://easings.net/</a></p>
+<p>对于需要更细致表现力的动画，可以靠<code>animation</code>属性和定义的关键帧来实现。由于主要针对Web中后台动效，用来承载信息和对比突出重点，设计上需尽量使用有意义的动效，保持克制，避免滥用。</p>
+<p>设计资源上，除了各种开开源动效库，各厂的设计团队也纷纷独立出动效，作为设计体系中单独一部分定义。</p>
+<blockquote>
+<p>几个值得借鉴的动效设计指南：</p>
+<ul>
+<li><a href="https://material.io/design/motion/understanding-motion.html" target="_blank" rel="noopener">Material Design - Motion</a></li>
+<li><a href="http://motion.ant.design/language/basic-cn" target="_blank" rel="noopener">Ant Motion</a></li>
+</ul>
+</blockquote>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/用户体验/" class="button small">用户体验</a> <a href="/tags/Web/" class="button small">Web</a> <a href="/tags/产品设计/" class="button small">产品设计</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

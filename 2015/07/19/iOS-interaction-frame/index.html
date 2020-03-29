@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="自己小结的iOS 界面交互框架">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>自己小结的iOS 界面交互框架 - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>自己小结的iOS 界面交互框架</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h3 id="一、抽屉式滑动导航"><a href="#一、抽屉式滑动导航" class="headerlink" title="一、抽屉式滑动导航"></a>一、抽屉式滑动导航</h3><p><img src="/img/in-post/2015-07-19/01.png" alt><br><strong>代表</strong>：Facebook，QQ，Path，旧版知乎</p>
+<p>不会直接显示在主屏幕，通过点击左（右）上角，或侧滑可以出现</p>
+<p><strong>优点</strong>：形式多样灵活，兼容多种模式（列表式、图表卡片式布局）；隐藏非核心的操作与功能，让用户更专注于核心的功能操作上去；扩展了屏幕显示范围</p>
+<p><strong>缺点</strong>：隐藏了框架中的其他状态，用户初次使用学习成本高</p>
+<h3 id="二、底部标签式"><a href="#二、底部标签式" class="headerlink" title="二、底部标签式"></a>二、底部标签式</h3><p><img src="/img/in-post/2015-07-19/02.png" alt><br><strong>代表</strong>：微信，微博，Instagram</p>
+<p>比较常见的经典布局</p>
+<p><strong>优点</strong>： 直观展现当前入口位置，各个入口之间可自由转换并且不会迷失方向，适合需要不断在各入口之间选择的app（社交类）</p>
+<p><strong>缺点</strong>：当底部标签数量过多时，可能使整个应用过于庞杂</p>
+<h3 id="三、跳板式（类win8，九宫格图标）"><a href="#三、跳板式（类win8，九宫格图标）" class="headerlink" title="三、跳板式（类win8，九宫格图标）"></a>三、跳板式（类win8，九宫格图标）</h3><p><img src="/img/in-post/2015-07-19/03.png" alt><br><strong>代表</strong>：去哪儿网，去啊，美图秀秀，随便走</p>
+<p>一般用作主导航</p>
+<p><strong>优点</strong>：清晰展现各入口位置；不必拘泥于完全网格式，可成比例放大某几个图标以彰显其总要性；容易记住位置，方便下次迅速找到</p>
+<p><strong>缺点</strong>：无法在多入口之间灵活跳转，不太适合社交类app；容易形成更深的路径，不能直接展现入口内容；不能显示太多入口次级内容</p>
+<h3 id="四、列表式"><a href="#四、列表式" class="headerlink" title="四、列表式"></a>四、列表式</h3><p><img src="/img/in-post/2015-07-19/04.png" alt><br><strong>代表</strong>：印象笔记</p>
+<p>最常见的导航模式之一，常用于次级页面</p>
+<p><strong>优点</strong>：层次清晰，可展示内容较长的标题，可展示部分预览内容</p>
+<p><strong>缺点</strong>： 同级内容过多时，用户易疲劳，排版灵活性不高，只能通过排列顺序、颜色来区分各入口重要程度</p>
+<h3 id="五、旋转木马式（轮播式）"><a href="#五、旋转木马式（轮播式）" class="headerlink" title="五、旋转木马式（轮播式）"></a>五、旋转木马式（轮播式）</h3><p><img src="/img/in-post/2015-07-19/05.png" alt><br><strong>代表</strong>：火柴盒</p>
+<p><strong>优点</strong>：可展示大面积的图片信息，左右滑动可顺畅切换，适用于每日一推</p>
+<p><strong>缺点</strong>： 不适合展示过多页面，不能跳跃性查看</p>
+<h3 id="六、点聚式"><a href="#六、点聚式" class="headerlink" title="六、点聚式"></a>六、点聚式</h3><p><img src="/img/in-post/2015-07-19/06.png" alt><br><strong>代表</strong>：Path</p>
+<p><strong>优点</strong>：节省页面空间，展开方式有趣</p>
+<p><strong>缺点</strong>：隐藏了框架中其他入口，不能直观展示各项功能</p>
+<h3 id="七、超级菜单式"><a href="#七、超级菜单式" class="headerlink" title="七、超级菜单式"></a>七、超级菜单式</h3><p><img src="/img/in-post/2015-07-19/07.png" alt></p>
+<p><strong>代表</strong>：美团</p>
+<p>手机网站中使用较多</p>
+<p><strong>优点</strong>：便于分类检索的次级导航</p>
+<p><strong>缺点</strong>：分类过细，返回寻找困难</p>
+<h3 id="八、陈列馆式"><a href="#八、陈列馆式" class="headerlink" title="八、陈列馆式"></a>八、陈列馆式</h3><p><img src="/img/in-post/2015-07-19/08.png" alt></p>
+<p><strong>代表</strong>：当当读书</p>
+<p><strong>优点</strong>：直观展示各项内容,方便浏览经常更新的内容</p>
+<p><strong>缺点</strong>：不适合展现顶层入口框架,容易形成界面内容过多，显得杂乱,设计效果容易呆板</p>
+<h3 id="九、瀑布式"><a href="#九、瀑布式" class="headerlink" title="九、瀑布式"></a>九、瀑布式</h3><p><img src="/img/in-post/2015-07-19/09.png" alt></p>
+<p><strong>代表</strong>：tataUFO</p>
+<p><strong>优点</strong>：浏览时体验流畅</p>
+<p><strong>缺点</strong>：缺乏对整体内容的体积感，易造成用户疲劳</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/交互/" class="button small">交互</a> <a href="/tags/小结/" class="button small">小结</a> <a href="/tags/iOS/" class="button small">iOS</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

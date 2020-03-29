@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="设计碎碎念：如何为「多层目录」选择恰当的呈现形式">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>设计碎碎念：如何为「多层目录」选择恰当的呈现形式 - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>设计碎碎念：如何为「多层目录」选择恰当的呈现形式</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>在设计中后台产品时，我们会碰到各种需要多层目录（或级联选择）的场景。</p>
+<p>最近在应对多层目录的需求时踩了小坑，好在后来意识到问题，及时修正了方案。不聊问题，先来看看常见形式：</p>
+<h3 id="形式一：多层目录"><a href="#形式一：多层目录" class="headerlink" title="形式一：多层目录"></a>形式一：多层目录</h3><p>常用于文件或报表索引，层级深度为3-4，模块位于侧边导航处，每层可点击+展开/收起。<br><img src="/img/in-post/2018-01-21/01.jpg" alt="confluence.jpg"></p>
+<p><img src="/img/in-post/2018-01-21/02.jpg" alt="bdp 个人版"></p>
+<h5 id="利"><a href="#利" class="headerlink" title="利"></a>利</h5><ul>
+<li>信息层级清晰直观</li>
+<li>左右映射，索引与内容一致性</li>
+<li>直接了当，随时在不同内容间切换<h5 id="弊"><a href="#弊" class="headerlink" title="弊"></a>弊</h5></li>
+<li>界面冗余</li>
+<li>分散用户注意力</li>
+<li>索引易被遮挡，需Hover或横向滚动</li>
+</ul>
+<h3 id="形式二：产品服务List"><a href="#形式二：产品服务List" class="headerlink" title="形式二：产品服务List"></a>形式二：产品服务List</h3><p>常用于控制台/产品官网，特点是深度为1-2层，Hover即出现，平铺展示所有项目。</p>
+<p><img src="/img/in-post/2018-01-21/03.jpg" alt="aliyun"></p>
+<p><img src="/img/in-post/2018-01-21/04.jpg" alt="baiduyun"></p>
+<h5 id="利-1"><a href="#利-1" class="headerlink" title="利"></a>利</h5><ul>
+<li>平铺全集，便于发现和寻找服务</li>
+<li>内容区足够大，极少存在遮挡</li>
+<li>默认收起，不占页面空间<h5 id="弊-1"><a href="#弊-1" class="headerlink" title="弊"></a>弊</h5></li>
+<li>仅适用于1-2层深度</li>
+</ul>
+<h3 id="形式三：级联选择"><a href="#形式三：级联选择" class="headerlink" title="形式三：级联选择"></a>形式三：级联选择</h3><p>常见于控制台导航栏选择服务或表单级联选择框，深度较自由，一般为2-3层。</p>
+<p><img src="/img/in-post/2018-01-21/05.jpg" alt="aliyun 级联选择"></p>
+<p><img src="/img/in-post/2018-01-21/06.jpg" alt="antdesign 级联选择框"></p>
+<h5 id="利-2"><a href="#利-2" class="headerlink" title="利"></a>利</h5><ul>
+<li>便于一次性选择</li>
+<li>可承载较多选择项，兼容性佳<h5 id="弊-2"><a href="#弊-2" class="headerlink" title="弊"></a>弊</h5></li>
+<li>不利于频繁切换</li>
+</ul>
+<h3 id="形式四：分步选择"><a href="#形式四：分步选择" class="headerlink" title="形式四：分步选择"></a>形式四：分步选择</h3><p>常用于较谨慎表单操作，将3-4甚至更多层级打散，页面每次平铺显示本层内容，逐层确定。</p>
+<p>##应用<br>最近一次应对这个问题时，首先尝试的是多级目录这一最原始的手法，考虑到于内容易被遮挡，便努力尝试了其他方式，包括级联选择、平铺展示全集、打散分步选择等能想到的各种方法。想了一圈，有找到「看起来」更好的方式，但中后台产品最重要的还是业务逻辑，于是最后又回到了原点，选择了多级目录。</p>
+<hr>
+<p>控制台类产品设计往往建立在已有的设计规范/原则的基础上，然而即使是同一控制台的不同模块，在形式上也未必完全一致，即实际解决方案没有那么「漂亮」。十全十美的规范不存在，如果强行套用，就要以牺牲部分用户体验为代价了。</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/交互/" class="button small">交互</a> <a href="/tags/Web/" class="button small">Web</a> <a href="/tags/小结/" class="button small">小结</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

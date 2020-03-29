@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="jQuery 学习笔记(一)">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>jQuery 学习笔记(一) - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>jQuery 学习笔记(一)</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>作为一名设计汪，也需要懂点前端知识。HTML/CSS 是最基础的，为了更好的交互效果，JavaScript也需要学一点，jQuery 作为一种强大易用的js 框架，被小伙伴们广为推荐。</p>
+<p>学习资源建议直接看W3school 的教程，若不能翻墙，也可以直接访问这个镜像网站： <a href="http://w3schools.bootcss.com/" target="_blank" rel="noopener">http://w3schools.bootcss.com/</a></p>
+<h2 id="1-基础定义"><a href="#1-基础定义" class="headerlink" title="1. 基础定义"></a>1. 基础定义</h2><p>基本句法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).action</span><br></pre></td></tr></table></figure>
+
+<p>理解：</p>
+<ul>
+<li><code>$</code> 定义 jQuery</li>
+<li><code>（selector）</code>用来访问 HTML 元素</li>
+<li><code>action( )</code> 用来操作元素</li>
+</ul>
+<h6 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h6><p>1.使用CSS选择器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="keyword">this</span>).hide() - 隐藏当前元素</span><br><span class="line">$(<span class="string">"p"</span>).hide() - 隐藏所有的&lt;p&gt; 标签元素</span><br><span class="line">$(<span class="string">".test"</span>).hide() - 隐藏所有包含<span class="string">"test"</span> 类的元素</span><br><span class="line">$(<span class="string">"#test"</span>).hide() - 隐藏所有ID为<span class="string">"test"</span> 的元素</span><br></pre></td></tr></table></figure>
+
+<p>2.防止在文件加载完成之前jQuery 启动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function()&#123;//jQuery ...&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2. 选择器"></a>2. 选择器</h2><ul>
+<li>标签选择器</li>
+<li>id选择器（#eg）</li>
+<li>class选择器（.eg）</li>
+<li>其他：<ul>
+<li><code>“ * ”</code> 选择全部</li>
+<li><code>“this”</code> 选择当前HTML 元素</li>
+<li><code>$(&quot;p.intro&quot;)</code>选择所有p 标签下“intro” 类的元素</li>
+<li><code>$(&quot;p:first&quot;)</code>选择第一个p 标签</li>
+<li><code>$(&quot;ul li:first&quot;)</code>选择第一个ul 的第一个li  </li>
+<li><code>$(&quot;ul li:first-child&quot;)</code>选择每一个ul 下的第一个li  </li>
+<li><code>$(&quot;[href]&quot;)</code>选择所有有href 属性的元素</li>
+<li><code>$(&quot;a[target=&#39;_blank&#39;]&quot;)</code>选择所有a 标签下的target值为 _blank 的元素</li>
+<li><code>$(&quot;a[target！=&#39;_blank&#39;]&quot;)</code>选择所有a 标签下的target值不为 _blank 的元素</li>
+<li><code>$(&quot;:button&quot;)</code>选择所有<code>&lt;button&gt;</code>和<code>&lt;input&gt;</code>中<code>type= button</code>的</li>
+<li><code>$(&quot;tr:even&quot;)</code>选择所有偶数的tr  </li>
+<li><code>$(&quot;odd:even&quot;)</code>选择所有奇数的 tr</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-事件"><a href="#3-事件" class="headerlink" title="3. 事件"></a>3. 事件</h2><table>
+<thead>
+<tr>
+<th align="center">鼠标事件</th>
+<th align="center">键盘事件</th>
+<th align="center">表单事件</th>
+<th align="center">文件/窗口事件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">click</td>
+<td align="center">keypress</td>
+<td align="center">submit</td>
+<td align="center">load</td>
+</tr>
+<tr>
+<td align="center">dbclick</td>
+<td align="center">keydown</td>
+<td align="center">change</td>
+<td align="center">resize</td>
+</tr>
+<tr>
+<td align="center">mouseenter</td>
+<td align="center">keyup</td>
+<td align="center">focus</td>
+<td align="center">scroll</td>
+</tr>
+<tr>
+<td align="center">mouseleave</td>
+<td align="center"></td>
+<td align="center">blur</td>
+<td align="center">unload</td>
+</tr>
+</tbody></table>
+<p>例子:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).hide();</span><br><span class="line">   &#125;);</span><br><span class="line"><span class="comment">// 鼠标点击</span></span><br><span class="line"></span><br><span class="line">  $(<span class="string">"input"</span>).focus(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).css(<span class="string">"background-color"</span>, <span class="string">"#cccccc"</span>);</span><br><span class="line">   &#125;);</span><br><span class="line">  $(<span class="string">"input"</span>).blur(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).css(<span class="string">"background-color"</span>, <span class="string">"#ffffff"</span>);</span><br><span class="line">   &#125;);</span><br><span class="line"><span class="comment">// 表单获取/失去焦点</span></span><br><span class="line"></span><br><span class="line">  $(<span class="string">"p"</span>).on(&#123;</span><br><span class="line">    mouseenter: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; $(<span class="keyword">this</span>).css(<span class="string">"background-color"</span>, <span class="string">"lightgray"</span>); &#125;,</span><br><span class="line">    mouseleave: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; $(<span class="keyword">this</span>).css(<span class="string">"background-color"</span>, <span class="string">"lightblue"</span>); &#125;,</span><br><span class="line">    click: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; $(<span class="keyword">this</span>).css(<span class="string">"background-color"</span>, <span class="string">"yellow"</span>); &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"><span class="comment">// 鼠标事件</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>##4. 遇到的其它小问题<br>经常在网页中看到这样虾面这样一段代码，其实是百度统计的东东。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">var</span> _hmt = _hmt || [];</span><br><span class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="keyword">var</span> hm =  <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span><br><span class="line">  hm.src = <span class="string">"//hm.baidu.com/hm.js?10701d9b4e040e37e58bee7e1ec1d252"</span>;</span><br><span class="line">  <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/前端/" class="button small">前端</a> <a href="/tags/jQuery/" class="button small">jQuery</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

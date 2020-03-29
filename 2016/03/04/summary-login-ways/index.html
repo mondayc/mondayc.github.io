@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="小结登录的几种交互方式">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>小结登录的几种交互方式 - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>小结登录的几种交互方式</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>登录注册的界面看起来很简单，在交互上却有很多值得思考的地方。现在我们选以下三种较有代表性的登录方式来比较和小结一下。</p>
+<blockquote>
+<h2 id="1-传统登录方式"><a href="#1-传统登录方式" class="headerlink" title="1.传统登录方式"></a>1.传统登录方式</h2></blockquote>
+<p>正常情况下，输入用户名、密码，点击登录就完成了，然而这个过程往往没有如此顺利。以下假设账号为手机号。</p>
+<h4 id="忘记密码："><a href="#忘记密码：" class="headerlink" title="忘记密码："></a>忘记密码：</h4><p>点击“忘记密码” → （新页面）输入手机号 → 点击“获取验证码 ”→ 输入验证码 → 设置新密码 → 点击“去登陆”</p>
+<p>这个过程跳转了一次页面。</p>
+<h4 id="新用户注册："><a href="#新用户注册：" class="headerlink" title="新用户注册："></a>新用户注册：</h4><p>点击“注册” → 输入手机号 → 点击“获取验证码” → 输入验证码 → 点击“下一步” → 设置密码 → 再次确认 → 点击“去登陆”</p>
+<p>在这个过程中跳转了两次页面。</p>
+<p>这算之前最为常见的一种登录注册方式了，然而随着我们现在使用手机应用数量的增多，通常会有10-20个不同的账户，而往往也会“作死”地设置各种不同的、复杂的密码。一段时间不用之后重新登录，基本都会点击“忘记密码”，或者是在提示密码错误之后点击“忘记密码”……这么麻烦的流程，浪费时间。况且一般用户都会有若干个邮箱，若不清楚是哪个邮箱注册的账号，那么很可能会出现“查无此账号”……嗯，用户若是有急事，因此耽误时间造成的代价十分不值。</p>
+<p><img src="/img/in-post/2016-03-04/01.jpg" alt></p>
+<blockquote>
+<h2 id="2-先判断账号是否存在的登录方式"><a href="#2-先判断账号是否存在的登录方式" class="headerlink" title="2.先判断账号是否存在的登录方式"></a>2.先判断账号是否存在的登录方式</h2></blockquote>
+<p>我们还是来简单地分析一下非顺利情况下的登录流程，依然以手机号为例。</p>
+<h4 id="忘记密码-amp-新用户注册："><a href="#忘记密码-amp-新用户注册：" class="headerlink" title="忘记密码 &amp; 新用户注册："></a>忘记密码 &amp; 新用户注册：</h4><p>输入验证码 → 设置密码 → 点击“登录”</p>
+<p>用户在一开始就输入手机号，系统先判断是否注册过，若已注册，就跳转到输入密码的页面，直接登录；</p>
+<p>若是没有注册过或在输入密码页面点击“忘记密码”，系统直接向该手机号发送验证码，输入验证码、设置密码之后，便可登录。若是没有获取到验证码，60s后可以“重新获取”。</p>
+<p>这种登录方式，最初是在印象笔记客户端中发现的，它成功地减少了新用户注册和现有用户忘记密码时的操作步骤，大大节省了时间。<br><img src="/img/in-post/2016-03-04/02.jpg" alt></p>
+<blockquote>
+<h2 id="3-直接短信发送密码的方式"><a href="#3-直接短信发送密码的方式" class="headerlink" title="3.直接短信发送密码的方式"></a>3.直接短信发送密码的方式</h2></blockquote>
+<p>这应该算是目前为止最为简单的登录方式了。还是来看一下流程：</p>
+<p>输入手机号 → 点击“下一步” → 输入密码 → 点击“登录”</p>
+<p>完！全！不！用！考虑密码是什么，用户体验不会更佳。这种方式在一些生鲜预定的手机应用（如：一米鲜）中较为常见。<br><img src="/img/in-post/2016-03-04/03.jpg" alt></p>
+<blockquote>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2></blockquote>
+<p>我们再来看一下这几种登录方式：</p>
+<p>传统的登录方式在用户准确记住用户名密码的前提下较为方便，然而对于使用各种邮箱和手机号注册的账户来书，难免会有出错的时候，这个时候就比较麻烦了…不过还好下次就能自动登录了。对于是否需要输入两次密码，结合自己日常的经历来看：用户在设置密码时，注意力是比较集中的，出错的几率很小，而输入两次会延长用户精神紧绷的时间，出错率也不会因此降低。</p>
+<p>首先判断用户是否已注册的方式能省事不少，但时候也不太好使：用户不确定是用哪个邮箱或手机号，一旦输错，不打个招呼就直接到了“输入验证码”的界面，事实上用户需要登录的是某个已有账号。</p>
+<p>再来看直接通过短信发送密码码的方式，它成功地让用户省去了记住账号密码的麻烦，用户体验极佳。或许你会想，这多不安全呀——有了手机短信就能登录，但再仔细一想，有很多应用或网站在“忘记密码”之后直接就发送“验证码”，然后重置密码，也就可以登录了，因此这并不算“不安全”。而对于安全系数要求较高的应用通常都会加上“密保问题”或者其他验证方式来确保安全性。</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/交互/" class="button small">交互</a> <a href="/tags/小结/" class="button small">小结</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

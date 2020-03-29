@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="如何跨设备与Github账号迁移Hexo博客">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>如何跨设备与Github账号迁移Hexo博客 - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>如何跨设备与Github账号迁移Hexo博客</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>半年过去，最近终于想起来要维护一下博客了（虽然也没什么人看）。大概在几个月前换了电脑，这次更新前顺便把博客迁移到了Github主账号;)</p>
+<p>开始操作，整个过程经历了以下几步：</p>
+<ul>
+<li>Hexo 环境搭建</li>
+<li>从Github 复制相关文件、替换</li>
+<li>安装需要的插件</li>
+<li>更新CNAME 解析</li>
+<li>Hexo 生成新的静态文件</li>
+</ul>
+<h2 id="Hexo-环境搭建"><a href="#Hexo-环境搭建" class="headerlink" title="Hexo 环境搭建"></a>Hexo 环境搭建</h2><p>前提条件：<strong>Git</strong>、<strong>Node.js</strong>，具体可参见<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo安装前提</a></p>
+<p>接下来执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>完成之后，进入打算存放博客的空文件夹，然后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
+<p><code>INFO  Start blogging with Hexo!</code></p>
+<p>到这儿Hexo 环境就搭建完成了。</p>
+<h2 id="从Github-复制相关文件、替换"><a href="#从Github-复制相关文件、替换" class="headerlink" title="从Github 复制相关文件、替换"></a>从Github 复制相关文件、替换</h2><p>不知起初为何头脑发热申请了多个Github账号，这次顺便把所有仓库都Transfer到一个账号下。新建一个仓库存放Source文件，再将此前存放博客静态文件的仓库，从之前账号迁移到目前的主账号。<code>clooock.github.com -&gt; mondayc.github.io</code></p>
+<p>选择另一个本地目录，拷贝原来文件的仓库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:Mondayc/mondayc.github.io.git</span><br></pre></td></tr></table></figure>
+
+<p>将以下文件拷贝至打算存放博客的文件夹并替换：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">package.json</span><br><span class="line">scaffolds/</span><br><span class="line">source/</span><br><span class="line">themes/</span><br></pre></td></tr></table></figure>
+
+<p>若有绑定自己的域名，记得拷贝<code>CNAME</code> 文件。</p>
+<h2 id="安装需要的插件"><a href="#安装需要的插件" class="headerlink" title="安装需要的插件"></a>安装需要的插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新CNAME-解析"><a href="#更新CNAME-解析" class="headerlink" title="更新CNAME 解析"></a>更新CNAME 解析</h2><p>由于更换了Github账号，需要更新CNAME解析。独立域名是在阿里云，这里需要去更新，把之前的clooock全改为了mondayc。</p>
+<h2 id="Hexo-生成新的静态文件"><a href="#Hexo-生成新的静态文件" class="headerlink" title="Hexo 生成新的静态文件"></a>Hexo 生成新的静态文件</h2><p>做完以上这些，同样是因为更换了账号，地址也要更新…再check 一下<code>_config.yml</code>文件中以下项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository:   https://github.com/mondayc/mondayc.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>确保仓库地址无误即可，然后生成静态文件、部署：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ Hexo g</span><br><span class="line">$ Hexo d</span><br></pre></td></tr></table></figure>
+
+<p><code>Deploy done: git</code></p>
+<hr>
+<p>等待一会儿，可顺利通过域名访问主页，迁移完成！</p>
+<blockquote>
+<p>Highlight：Source 文件和生成的静态文件分别通过不同repo维护。</p>
+</blockquote>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/杂货铺/" class="button small">杂货铺</a> <a href="/tags/工具/" class="button small">工具</a> <a href="/tags/Github/" class="button small">Github</a> <a href="/tags/Hexo/" class="button small">Hexo</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

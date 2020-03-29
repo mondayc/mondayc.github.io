@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="[译]iOS 9 人机界面指南（1-2）-iOS应用解析">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>[译]iOS 9 人机界面指南（1-2）-iOS应用解析 - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>[译]iOS 9 人机界面指南（1-2）-iOS应用解析</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>几乎所有的iOS应用都会或多或少使用 UIkit 框架定义的组件，了解这些基本组件的名称、作用和功能，有助于你在设计移动应用界面时做出明智的决策。</p>
+<p><img src="/img/in-post/2016-02-26-1.png" alt></p>
+<p>由UIkit提供的UI元素可分为以下四大类：</p>
+<p><strong>栏</strong>： 栏包含了上下文相关的信息来告知用户他们当前的位置，还有控件来帮助用户导航或引发操作。</p>
+<p><strong>内容视图</strong>：内容视图包含了应用特定的内容和一些操作行为，比如滚动、插入、删除和项目排序等。</p>
+<p><strong>控件</strong>：控件用于执行操作或显示信息。</p>
+<p><strong>临时视图</strong>：临时视图短暂出现，给用户提供重要信息或更多的选择和功能。</p>
+<p>除了定义UI元素，UIKit还定义对象怎样实现功能，比如手势识别，绘图，辅助功能以及对打印的支持。</p>
+<p>从编程的角度来看，一个UI元素就是一种“view”（视图的子类），因为它们继承了UIView。视图知道怎样绘制屏幕内容，也能感知用户在其范围内触碰屏幕。 控件（如按钮和滑块）、内容视图（如集合视图和表格视图）以及临时视图（如警告框和动作菜单）等都是视图类型。视图的所有类型有：控件(比如按钮和滑块)、内容视图(比如集合视图和表格视图)，以及临时视图(如警告提示和动作菜单)。</p>
+<p>要在你的应用中管理一组或一系列的视图，往往会使用 <em>视图控制器</em>。它可以协调视图的内容显示，实现用户交互背后的对应功能，并可以在不同内容屏幕之间切换。比如，系统设置使用导航控制器来展示它的视图层级。</p>
+<p>以下是关于视图与视图控制器怎样结合并实现iOS应用UI的例子</p>
+<p><img src="/img/in-post/2016-02-26-2.png" alt></p>
+<p>虽然开发者认为在视图和视图控制器方面，用户更多情况下会遇到很多个屏幕内容的集合呈现在iOS应用中。从这个角度来看，<em>视图</em> 在应用中往往对应于特有的视觉呈现状态或模式。</p>
+<blockquote>
+<p>注：<br>一个iOS应用包含一个窗口，但并不同于计算机程序的窗口：iOS的窗口没有可见部分且不能屏幕上被移动到另一个位置。大多数的iOS应用都只包含一个窗口；支持外部显示设备的应用可以有多个窗口。</p>
+</blockquote>
+<p>在<em>iOS Human Interface Guidelines</em> 中， <em>screen</em> （屏幕）这个词和大多数用户理解的一样。作为开发者，或许你需要再读一下与<a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIScreen_Class/index.html#//apple_ref/occ/cl/UIScreen" target="_blank" rel="noopener">UIScreen</a>相关的其他章节，以便于更好的理解如何关联外部屏幕。</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/iOS9/" class="button small">iOS9</a> <a href="/tags/译文/" class="button small">译文</a> <a href="/tags/界面规范/" class="button small">界面规范</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

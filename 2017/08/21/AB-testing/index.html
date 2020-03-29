@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="photography">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nellie N">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="初探：A/B Test">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="简の记">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>初探：A/B Test - 简の记</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/img/logo.svg" alt="" /></span><span class="title">简の记</span>
+        </a>
+
+        <!-- Nav -->
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                
+                    <li>
+                        <a href="/#">照片</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>初探：A/B Test</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>「A/B 测试」简单的说就是某个元素的两个（或多个）版本摆在面前，通过测试确定并应用更好的版本。因小巧有效低成本，是一种经常被提起和使用的方法论。其中的套路再简单不过，但初次实践还是要多加注意，避免踩坑，影响数据可靠性从而误导决策。</p>
+<p>各种产品都通过测试来提升产品转化率，降低流失率：电商类网站希望提升用户购买率；SaaS 类产品希望更多用户去注册免费试用，并转化为付费用户；新闻和信息类产品则期待更多用户去点击广告，或是选择付费订阅。</p>
+<h2 id="进行A-B-测试"><a href="#进行A-B-测试" class="headerlink" title="进行A/B 测试"></a>进行A/B 测试</h2><p>已上线并有很大用户量的产品，适合做A/B 测试，而对于初创公司或产品，则不太适合。A/B 测试整个过程可分为以下四步。</p>
+<p><img src="/img/in-post/2017-08-21-1.png" alt></p>
+<h4 id="建立单个假设"><a href="#建立单个假设" class="headerlink" title="建立单个假设"></a>建立单个假设</h4><p>对需要进行测试的变量按优先级排序，逐个测试。常用的测试变量包括按钮（位置、文字、颜色）、标题、文段、链接、表单（长短、文字描述）、版面设置（页面排布、位置）、促销方案（文案、商品搭配、产品定价）、图片（内容、位置）等。</p>
+<p>在同一次测试过程中，可设置多个对照组，但必须控制单一变量。考虑到投入产出比，很少为极微小的变化进行A/B 测试，比如某个按钮的大小变化，或是某个动效的时长。</p>
+<h4 id="设定目标"><a href="#设定目标" class="headerlink" title="设定目标"></a>设定目标</h4><p>通过可量化的数值来验证是否达成效果，目标主要分为两类：</p>
+<ul>
+<li>提升X：转化率、页面浏览率、停留时间、点击率、分享次数等</li>
+<li>降低Y：跳出率、流失率等<blockquote>
+<p>例：某淘宝店铺商品详情页，目标为将购买点击率从5%提升至10%.</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="测试和数据收集"><a href="#测试和数据收集" class="headerlink" title="测试和数据收集"></a>测试和数据收集</h4><p>工具方面自己使用过GA，毕竟开源免费。此外更专业省事的A/B 测试付费工具也有一些，比如 <a href="https://www.optimizely.com/" target="_blank" rel="noopener">Optimizely</a>、<a href="http://www.appadhoc.com/" target="_blank" rel="noopener">吆喝科技</a>.</p>
+<p>在测试阶段内，对于同一用户ID，每次进入访问的应该是相同内容。一般测试上线后等待两到三周，可结束测试；网站流量越小，则需要越多的时间。</p>
+<h5 id="样本量"><a href="#样本量" class="headerlink" title="样本量"></a>样本量</h5><p>当目标设定的变化百分比（转化率）越大，原转化率越小，所需的测试周期越短，样本量也越少。具体计算公式：</p>
+<p><img src="/img/in-post/2017-08-21-2.png" alt></p>
+<h4 id="检验假设"><a href="#检验假设" class="headerlink" title="检验假设"></a>检验假设</h4><p>若结果得出明显差异的更优方案，可以在上线更优版本之后继续测试新变量。若测试结果各组之间并无明显统计学差异，则需提出另外的假设来进行测试。</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p><a href="https://uxdesign.cc/how-netflix-does-a-b-testing-87df9f9bf57c" target="_blank" rel="noopener">How Netflix does A/B Testing</a><br><a href="https://medium.com/airbnb-engineering/experiments-at-airbnb-e2db3abf39e7" target="_blank" rel="noopener">Experiments at Airbnb</a><br><a href="https://www.infoq.com/news/2015/11/ab-testing" target="_blank" rel="noopener">A/B Testing at Booking.com</a></p>
+<h5 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h5><p><a href="https://item.jd.com/11442630.html" target="_blank" rel="noopener">《用户体验度量：量化用户体验的统计学方法》</a></p>
+<hr>
+<blockquote>
+<p>这是篇原该写于半年前的小结，虽然迟到太多，但也让自己再次回顾了第一次做A/B 测试的全过程，坑太多，同时也需要大量的理论知识和实践相结合，还有太多的东西来不及了解，向做用研的同学表示佩服。</p>
+</blockquote>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/About-Face3/" class="button small">About Face3</a> <a href="/tags/读书笔记/" class="button small">读书笔记</a> <a href="/tags/交互/" class="button small">交互</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            
+            <div>
+                Keep it simple stupid and EAT THE FROG.
+            </div>
+        </section>
+        <section>
+            
+            <ul class="icons">
+                
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/xy_ni" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+
+                
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+
+                
+                    <li><a href="mailto:zeal_xy@163.com" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 2020 Xiaoyu Ni</li>
+            <li>Designed by: <a href="https://nixiaoyu.cn" target="_blank">Xiaoyu Ni</a></li>
+            <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
