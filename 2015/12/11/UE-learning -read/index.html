@@ -163,13 +163,47 @@
 
 
 <div class="tags">
-    <a href="/tags/交互/" class="button small">交互</a> <a href="/tags/读书笔记/" class="button small">读书笔记</a> <a href="/tags/用户体验/" class="button small">用户体验</a>
+    <a href="/tags/读书笔记/" class="button small">读书笔记</a> <a href="/tags/交互/" class="button small">交互</a> <a href="/tags/用户体验/" class="button small">用户体验</a>
 </div>
 
 
 <!-- Comments -->
 <div>
-    
+    <!-- Valine -->
+
+    <hr />
+    <h3>留言:</h3>
+    <div class="blog-post-comments">
+        <section id="comment">
+            <div id="valine_container" class="valine_thread"></div>
+        </section>
+        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+        <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = ''.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = '' == true;
+            var verify = '' == true;
+            var valine = new Valine();
+            valine.init({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                appId: "XUNzkwEJ5BQLaiwo8RwpNvBJ-gzGzoHsz",
+                appKey: "C2nY0kq0WTC4pFmIuOIjAE0c",
+                placeholder: "说点什么吧",
+                pageSize:'10',
+                avatar:'retro',
+                recordIP:'true',
+            })
+        </script>
+    </div>
+
+
+
+
 
 
 </div>

@@ -2901,3 +2901,6 @@ button,
   #wrapper > * > .inner img {
     max-width: 100%;
     text-align: center; }
+
+#wrapper > * .v .vwrap .vheader .vinput {
+  display: inline; }
