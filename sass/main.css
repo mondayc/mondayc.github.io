@@ -2903,4 +2903,18 @@ button,
     text-align: center; }
 
 #wrapper > * .v .vwrap .vheader .vinput {
-  display: inline; }
+  display: inline;
+  border: none; }
+
+#wrapper > * .v .vwrap .vheader .vinput:focus {
+  box-shadow: inset 0 -1px 0 0 #eeeeee; }
+
+#wrapper > * textarea:focus {
+  box-shadow: none; }
+
+#wrapper > * .v .vbtn {
+  padding: 0 1.25em 0 1.6em;
+  border: none; }
+
+#wrapper > * .v .vbtn:hover {
+  background-color: #ebf3ff; }
