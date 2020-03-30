@@ -2902,6 +2902,30 @@ button,
     max-width: 100%;
     text-align: center; }
 
+#wrapper > * .archives {
+  margin-top: 40px; }
+  #wrapper > * .archives .archive-title {
+    margin: 0 0 2em 2em; }
+
+#wrapper > * div.meta {
+  display: inline;
+  padding-right: 1.2em; }
+
+#wrapper > * ul.post-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 2em; }
+
+#wrapper > * li.post-item {
+  padding-left: 0;
+  padding-bottom: .5em; }
+  #wrapper > * li.post-item span a {
+    border-bottom: none; }
+
+#wrapper > * h2.title {
+  padding: 1em 0 1em 0;
+  margin: 0; }
+
 #wrapper > * .v .vwrap .vheader .vinput {
   display: inline;
   border: none; }
