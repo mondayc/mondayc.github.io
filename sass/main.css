@@ -2945,7 +2945,7 @@ button,
   box-shadow: none; }
 
 #wrapper > * .v .txt-right {
-  display: none; }
+  display: none !important; }
 
 #wrapper > * .v .vbtn {
   padding: 0 1.25em 0 1.6em;
