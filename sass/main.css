@@ -2428,7 +2428,7 @@ button,
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        opacity: 0.25;
+        opacity: 0.16;
         z-index: 2; }
     .tiles article > a {
       display: -moz-flex;
@@ -2517,6 +2517,8 @@ button,
   body.is-touch .tiles article .content {
     max-height: 15em;
     opacity: 1; }
+  .tiles article:hover > .image:before {
+    background-color: #000; }
   @media screen and (max-width: 1280px) {
     .tiles {
       margin: -1.25em 0 0 -1.25em; }
