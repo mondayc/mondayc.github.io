@@ -2964,3 +2964,6 @@ button,
   padding-right: 2.5em;
   color: #5a9afd;
   font-weight: 400; }
+
+#wrapper > * .bilibili-player-video-recommend-container {
+  display: none !important; }
