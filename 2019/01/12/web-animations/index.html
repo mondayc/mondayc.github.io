@@ -156,7 +156,6 @@
 <p>「我设计了一个切换动效，先这样，然后这样，最后这样…效果视频在这里！」<br>…<br>前端甲：「不加动效又不是不能用」<br>前端乙：「告诉我用的什么缓动、延时间隔、每个元素过渡时间多久」<br>前端丙：「你的设计不符合框架，是没办法实现的」<br>…</p>
 <p>不难看出，前端工程师根据以往工作经验，容易形成 <strong>设计师不懂实现原理</strong> 的刻板印象认知偏见，对动效实现尤其如此。</p>
 <p>为了从根源上解决这个问题，我们从基本原理和前端实现，来硬核拆解一下动效。</p>
-<hr>
 <h3 id="动效拆解"><a href="#动效拆解" class="headerlink" title="动效拆解"></a>动效拆解</h3><p>Web端可交互元素产生的动画，通常由一些条件(hover/ click/ double-click/ drag) 触发，使元素从一个状态变为另一个状态。对于成组元素更复杂点的动画，则需要通过keyframes定义中间态的关键帧。</p>
 <p>关键帧用来定义元素模块的样式、形状大小和位置等；动效始末时间差构成持续时长；缓动曲线形成节奏，以实现自然过渡效果。</p>
 <p>一个组件模块在动效展示中，元素变化可拆解为以下四类：</p>
@@ -166,7 +165,7 @@
 <li>移入元素</li>
 <li>共享元素</li>
 </ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-7cc1b30d68a3f306.gif" alt="MD-动效分解.gif"></p>
+<p><img src="/img/in-post/2019-01-12/01.gif" alt="MD-动效分解.gif"></p>
 <p>相较于C端产品的情感化设计，在中后台设计中，动效主要作用可概括为信息承载、突出重点、强化品牌。</p>
 <h3 id="时长"><a href="#时长" class="headerlink" title="时长"></a>时长</h3><p>动效时长与动效复杂程度、类型、面积大小相关。</p>
 <ol>
@@ -186,9 +185,9 @@
 <h3 id="节奏"><a href="#节奏" class="headerlink" title="节奏"></a>节奏</h3><p>自然物体位置变化遵循牛顿运动定律。就像自然世界中很少有匀速直线运动，在界面设计中也尽量避免匀速运动，我们用缓动曲线来调整动效节奏，使之更接近自然。</p>
 <h4 id="缓动曲线"><a href="#缓动曲线" class="headerlink" title="缓动曲线"></a>缓动曲线</h4><p>缓动曲线用来控制动画的运动速率，使其按照我们的意愿模拟真实物体的运动规律。想象一下钟摆实验。</p>
 <p>缓动的实现，离不开贝塞尔曲线。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-d347fc6e71bb4c30.png" alt="image.png"></p>
+<p><img src="/img/in-post/2019-01-12/02.png" alt="image.png"></p>
 <p>在CSS中，我们常用的缓动<code>cubic-bezier</code>，即标准三次方贝塞尔曲线。以渐入渐出曲线为例，曲线中有两个固定锚点(0,0)和(1,1)，还有两个可拖动的中间点(0.6,0.2)和(0.4,0.8)。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-eb7697c486afcf94.png" alt="image.png"></p>
+<p><img src="/img/in-post/2019-01-12/03.png" alt="image.png"></p>
 <p>对应的CSS：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: cubic-bezier(0.6, 0.2, 0.4, 0.8);</span><br></pre></td></tr></table></figure>
 
@@ -227,7 +226,7 @@
 
 
 <div class="tags">
-    <a href="/tags/交互/" class="button small">交互</a> <a href="/tags/前端/" class="button small">前端</a>
+    <a href="/tags/交互/" class="button small">#交互</a> <a href="/tags/前端/" class="button small">#前端</a>
 </div>
 
 

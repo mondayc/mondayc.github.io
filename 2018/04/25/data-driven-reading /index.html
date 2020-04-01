@@ -155,7 +155,7 @@
 <!-- Content -->
 <p>AI热度不减，机器学习也仿佛当下时尚潮流，而这一切都是基于大数据的应用。最近读了一本有关数据驱动的书，作者桑文峰是神策数据的创始人，前百度大数据部技术经理。</p>
 <p><img src="/img/in-post/2018-04-25/01.jpg" alt="《数据驱动——从方法到实践》"></p>
-<p>这本书的结构如书名：围绕数据驱动，阐述方法和实践。<br><img src="https://upload-images.jianshu.io/upload_images/674139-1d933a65e1391dc9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>这本书的结构如书名：围绕数据驱动，阐述方法和实践。<br><img src="/img/in-post/2018-04-25/02.jpg" alt></p>
 <p>印象较深的部分为二三四这几个章节，个人觉得这也正是书中精华所在。</p>
 <h2 id="大数据思维与数据驱动"><a href="#大数据思维与数据驱动" class="headerlink" title="大数据思维与数据驱动"></a>大数据思维与数据驱动</h2><p>什么是大数据呢？</p>
 <blockquote>
@@ -164,9 +164,9 @@
 <h3 id="大数据特点"><a href="#大数据特点" class="headerlink" title="大数据特点"></a>大数据特点</h3><p>在书中，作者用四个字归纳了大数据的特点：大 全 细 时</p>
 <p>大——个体数量大，我的理解可以换个字「众」；以企鹅为例，就是有非常多只企鹅的数据；<br>全——覆盖类型众多，如所有花色性状的企鹅；<br>细——数据信息具体到每只企鹅的组织、器官；<br>时——实时性。</p>
 <h3 id="数据驱动"><a href="#数据驱动" class="headerlink" title="数据驱动"></a>数据驱动</h3><p>在完整产品周期中，根据阶段和不同类型数据的用途，数据驱动影响了产品决策和产品智能应用。相较于后者，对设计师有直接意义的是依靠数据来驱动产品决策。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-e6f391fbc0bf0d82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/03.jpg" alt></p>
 <h2 id="数据驱动的环节"><a href="#数据驱动的环节" class="headerlink" title="数据驱动的环节"></a>数据驱动的环节</h2><p>总体上分为四个步骤：数据采集-&gt;数据建模-&gt;数据分析-&gt;数据展示</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-bd0b37e182242319.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/04.jpg" alt></p>
 <h3 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h3><h4 id="采集对象"><a href="#采集对象" class="headerlink" title="采集对象"></a>采集对象</h4><ul>
 <li>前端操作（Web/ Android/ iOS等）：按钮点击、下拉选择等</li>
 <li>后端日志（Nginx/ UI/ Server等）：浏览、检索、购买、支付等</li>
@@ -181,31 +181,31 @@
 </ul>
 </blockquote>
 <h4 id="采集方法"><a href="#采集方法" class="headerlink" title="采集方法"></a>采集方法</h4><p>主要为全埋点和代码埋点两种方式，后者又分为前端埋点和后端埋点。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-3559f3ff4408d73b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/05.jpg" alt></p>
 <blockquote>
 <p> 前端埋点：<br>类似全埋点，在前端嵌入SDK，但对每一关键行为都需要调用SDK代码，将必要的时间明、属性字段写入代码，发送到后台服务器。</p>
 <p>后端埋点：<br>将相关事件、属性通过后端模块调用SDK方式发送到后台服务器。（数据可靠性更高，且一处埋点，Web/iOS/Android 端全都接入了）</p>
 </blockquote>
 <h3 id="数据建模"><a href="#数据建模" class="headerlink" title="数据建模"></a>数据建模</h3><p>书中提到的多维事件模型，包含两个部分，即事件表和用户表。事件表包含了对行为事件的描述「4W1H」，用户表则包含了用户属性信息等的「User Profile」。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-1891f0e5a57f16c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/06.jpg" alt></p>
 <h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><p>以神策数据、百度统计、GrowingIO、GA为例（后三者是全埋点方式），从菜单中可以发现各数据分析产品功能模块大同小异：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-d75ea44cab87f878.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/07.jpg" alt></p>
 <p>与数据建模中的 Event 和 User 对应，这里的数据分析主要是行为分析和用户分析两类。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-750366f1ce8e5a41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/08.jpg" alt></p>
 <p>以神策数据平台为例，来看几种数据分析的方法吧。</p>
 <h4 id="事件分析"><a href="#事件分析" class="headerlink" title="事件分析"></a>事件分析</h4><p>用来研究某行为事件的发生对企业组织价值的影响以及影响程度。</p>
 <p>在行为事件分析过程中，通常经历从事件定义与选择 -&gt; 下钻 -&gt; 解释与结论三步，而最后一步「解释与结论」，在一些免费版工具中，往往需要用户自己来做，这是重点环节之一。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-c6d6a682c5d45dd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="事件分析"></p>
+<p><img src="/img/in-post/2018-04-25/09.jpg" alt="事件分析"></p>
 <h4 id="漏斗分析"><a href="#漏斗分析" class="headerlink" title="漏斗分析"></a>漏斗分析</h4><p>用来了解用户在整个流程中的，从起点到终点，每一步的转化情况。<br>以理财产品为例，从漏洞分析中发现「成功交易」这一环节的转化率过低，接下来便针对性思考解决办法。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-829b86b177cd0c3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/10.jpg" alt></p>
 <h4 id="点击分析"><a href="#点击分析" class="headerlink" title="点击分析"></a>点击分析</h4><p>即页面热力分析，展示某一个或某一组相似页面中所有的用户点击数据。一般用于Landing Page的分析。</p>
 <h4 id="用户路径"><a href="#用户路径" class="headerlink" title="用户路径"></a>用户路径</h4><p>通过用户行为路径，发现用户行为特点与背后原因。展示形式一般采用桑基图。</p>
 <h4 id="用户分群"><a href="#用户分群" class="headerlink" title="用户分群"></a>用户分群</h4><p>用户信息标签化，了解自己产品的真实用户是怎样一群人。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-27f0fb150499f04a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="用户分群"></p>
+<p><img src="/img/in-post/2018-04-25/11.jpg" alt="用户分群"></p>
 <p>漏斗分析一般用于关注阶段差异；用户分群则用来关注群体差异。</p>
 <h2 id="数据驱动产品运营和决策"><a href="#数据驱动产品运营和决策" class="headerlink" title="数据驱动产品运营和决策"></a>数据驱动产品运营和决策</h2><h3 id="指标体系构建"><a href="#指标体系构建" class="headerlink" title="指标体系构建"></a>指标体系构建</h3><p>作者在书中提到了两种方式：第一关键指标法，海盗指标法。</p>
 <h4 id="第一关键指标法"><a href="#第一关键指标法" class="headerlink" title="第一关键指标法"></a>第一关键指标法</h4><p>用来确定产品当前发展阶段最重要的问题。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-a6487513d6a24d12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/12.jpg" alt></p>
 <blockquote>
 <p>第一关键指标法，出自《精益数据分析》<br>最小可用产品，出自《精益创业》</p>
 </blockquote>
@@ -213,9 +213,9 @@
 <p>第一阶段：确定用户需求，做出MVP来验证需求真实性 ；<br>第二阶段：成型产品+固定的用户群，有丰富数据进行分析；<br>第三阶段：产品形态相对成熟，企业关注规模化、快速盈利。</p>
 <h4 id="海盗指标法"><a href="#海盗指标法" class="headerlink" title="海盗指标法"></a>海盗指标法</h4><p>为企业提供数据分析基础和罗盘，以及指导创业和企业发展的探索方向。</p>
 <p>五个关键词：获取、激活、留存、营收、引荐，这也正是用户生命周期中最重要的五个环节。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-7a0553b486279943.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="/img/in-post/2018-04-25/13.jpg" alt></p>
 <p>获取：举个栗子，在下图中按照「广告系列来源」，查看「APP新用户的访问」「总次数」，不难发现蓝色折线对应数值明显高于另外两者，那么运营人员似乎就该考虑继续加大蓝线对应渠道的广告投入了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-7277fc9497e8a965.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="获取"></p>
+<p><img src="/img/in-post/2018-04-25/14.jpg" alt="获取"></p>
 <p>激活：关键是找到产品的Magic Number，本质是用户只有进行了这些操作后，才真正体验了产品的价值。</p>
 <p>借助三个来自zhihu的栗子：</p>
 <ul>
@@ -223,12 +223,12 @@
 <li>LinkedIn发现新用户如果一星期内加到5个联系人，他们的留存率和使用频率将会提高3-5倍；</li>
 <li>Dropbox发现新用户只要使用1次Dropbox文件夹，变成忠诚用户的可能性大大增加。</li>
 </ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-7c887381dd9bc91e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="激活"></p>
+<p><img src="/img/in-post/2018-04-25/15.jpg" alt="激活"></p>
 <p>激活用户后，开始考虑如何提升留存率：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-4dbcb7516f228a0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="留存"></p>
+<p><img src="/img/in-post/2018-04-25/16.jpg" alt="留存"></p>
 <p>在降低流失率的同时，延长用户生命周期，是提升留存率考虑的两个方面。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-163cdcb58ac1426e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="营收"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/674139-ab07643f4879540c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引荐"></p>
+<p><img src="/img/in-post/2018-04-25/17.jpg" alt="营收"></p>
+<p><img src="/img/in-post/2018-04-25/18.jpg" alt="引荐"></p>
 <p>数据的确很重要，但也要留神别「被」数据驱动了，质疑和验证同样重要，而后半部分才是决策的关键。</p>
 <blockquote>
 <p>被假数据坑的次数也挺多的。举个栗子：内搜首页有显示各个区域实时人数 ，科技园餐厅午餐峰值在12:25左右，随后开始下降，根据数据，12:40左右人依然很多；实际感受却并不是如此：可能是该买的都买了，大家都开始坐下吃了，虽然人很多，但排队买饭的人少了，自然就感觉食堂人数比实际数据少了…</p>
@@ -252,7 +252,7 @@
 
 
 <div class="tags">
-    <a href="/tags/产品/" class="button small">产品</a> <a href="/tags/读书笔记/" class="button small">读书笔记</a> <a href="/tags/交互/" class="button small">交互</a>
+    <a href="/tags/产品/" class="button small">#产品</a> <a href="/tags/读书笔记/" class="button small">#读书笔记</a> <a href="/tags/交互/" class="button small">#交互</a>
 </div>
 
 
