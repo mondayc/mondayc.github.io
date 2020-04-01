@@ -2919,8 +2919,10 @@ button,
 
 #wrapper > * div.time {
   display: block;
-  font-size: .8em;
+  font-size: .9em;
   color: #999999; }
+  #wrapper > * div.time .leancloud_visitors em, #wrapper > * div.time .leancloud_visitors i {
+    font-style: normal; }
 
 #wrapper > * ul.post-list {
   list-style: none;
@@ -2936,6 +2938,9 @@ button,
 #wrapper > * h2.title {
   padding: 1em 0 1em 0;
   margin: 0; }
+
+#wrapper > * .v .vlist {
+  padding-top: 1.5em; }
 
 #wrapper > * .v .vwrap .vheader .vinput {
   display: inline;
@@ -2964,6 +2969,19 @@ button,
   padding-right: 2.5em;
   color: #5a9afd;
   font-weight: 400; }
+
+#wrapper > * .v .vlist .vcard .vhead .vnick {
+  color: #617da9;
+  font-weight: 700; }
+
+#wrapper > * .v .vlist .vcard .vhead .vnick:before {
+  background: #617da9; }
+
+#wrapper > * .v .vlist .vcard {
+  padding-top: 0; }
+
+#wrapper > * .vinfo {
+  display: none !important; }
 
 #wrapper > * .bilibili-player-video-recommend-container {
   display: none !important; }
