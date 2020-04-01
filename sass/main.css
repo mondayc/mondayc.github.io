@@ -2908,6 +2908,14 @@ button,
     max-width: 100%;
     text-align: center; }
 
+#wrapper > * .p-copyright {
+  border-left: 2px solid #626e82;
+  background: #f5f6f7;
+  padding: 1em;
+  font-size: .8em; }
+  #wrapper > * .p-copyright p {
+    margin: 0; }
+
 #wrapper > * .archives {
   margin-top: 40px; }
   #wrapper > * .archives .archive-title {
