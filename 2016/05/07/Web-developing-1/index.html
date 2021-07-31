@@ -241,7 +241,7 @@
 </blockquote>
 <p>####2. 有关jQuery 加载方式</p>
 <p>有时会看到在引入jQuery 时有这样一段代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"</span> type=<span class="string">"text/javascript"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;<span class="built_in">window</span>.jQuery || <span class="built_in">document</span>.write(<span class="string">'&lt;script src="jquery-2.1.1.min.js"&gt;&lt;\/script&gt;'</span>)&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"</span> type=<span class="string">"text/javascript"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;<span class="built_in">window</span>.jQuery || <span class="built_in">document</span>.write(<span class="string">'&lt;script src="jquery-2.1.1.min.js"&gt;&lt;\/script&gt;'</span>)&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>这样的写的话，就可以实现考第一种方式jQuery 未能加载成功的情况下，自动加载本地jQuery 文件。</p>
 <blockquote>
