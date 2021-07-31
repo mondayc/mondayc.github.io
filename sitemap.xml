@@ -326,13 +326,6 @@
   </url>
   
   <url>
-    <loc>http://www.nixiaoyu.cn/tags/%E4%BA%A7%E5%93%81/</loc>
-    <lastmod>2021-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nixiaoyu.cn/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
@@ -348,6 +341,13 @@
   
   <url>
     <loc>http://www.nixiaoyu.cn/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nixiaoyu.cn/tags/%E4%BA%A7%E5%93%81/</loc>
     <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -405,13 +405,6 @@
 
   
   <url>
-    <loc>http://www.nixiaoyu.cn/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2021-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nixiaoyu.cn/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
@@ -420,6 +413,13 @@
   
   <url>
     <loc>http://www.nixiaoyu.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nixiaoyu.cn/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
