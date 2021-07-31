@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.nixiaoyu.cn/about/index.html</loc>
+    
+    <lastmod>2021-07-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.nixiaoyu.cn/2021/01/05/2020review/</loc>
     
     <lastmod>2021-01-05</lastmod>
@@ -282,13 +289,6 @@
   </url>
   
   <url>
-    <loc>https://www.nixiaoyu.cn/about/index.html</loc>
-    
-    <lastmod>2020-03-31</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.nixiaoyu.cn/2018/01/03/photo-austria/</loc>
     
     <lastmod>2020-03-31</lastmod>
@@ -326,14 +326,14 @@
   </url>
   
   <url>
-    <loc>https://www.nixiaoyu.cn/tags/%E4%BA%A4%E4%BA%92/</loc>
+    <loc>https://www.nixiaoyu.cn/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.nixiaoyu.cn/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://www.nixiaoyu.cn/tags/%E4%BA%A4%E4%BA%92/</loc>
     <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
